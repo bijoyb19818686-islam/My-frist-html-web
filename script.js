@@ -1,19 +1,13 @@
-const sidebar=document.getElementById("sidebar");
+const sidebar = document.getElementById("sidebar");
 
-document.getElementById("menuBtn").onclick=function(){
+document.getElementById("menuBtn").onclick = function () {
+    sidebar.classList.add("active");
+};
 
-sidebar.classList.add("active");
+document.getElementById("closeBtn").onclick = function () {
+    sidebar.classList.remove("active");
+};
 
-}
-
-document.getElementById("closeBtn").onclick=function(){
-
-sidebar.classList.remove("active");
-
-}
-
-document.getElementById("themeBtn").onclick=function(){
-
-alert("Dark Mode Coming Soon");
-
-}
+document.getElementById("themeBtn").onclick = function () {
+    alert("Dark Mode will be added soon.");
+};
