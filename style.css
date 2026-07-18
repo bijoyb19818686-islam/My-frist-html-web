@@ -167,3 +167,42 @@ header h2{
 }
 
 }
+/* ---------- Dark Mode ---------- */
+
+body.dark{
+    background:#121212;
+    color:#f1f1f1;
+}
+
+body.dark header{
+    background:#111;
+}
+
+body.dark .sidebar{
+    background:#1b1b1b;
+}
+
+body.dark .sidebar a:hover{
+    background:#333;
+}
+
+body.dark section{
+    background:#1e1e1e;
+    color:#f1f1f1;
+}
+
+body.dark .tagline{
+    color:#ccc;
+}
+
+body.dark h2{
+    color:#4da3ff;
+}
+
+body.dark blockquote{
+    border-left-color:#4da3ff;
+}
+
+body.dark .profile-frame{
+    background:#222;
+}
