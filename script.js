@@ -1,3 +1,5 @@
+const EDIT_MODE = false;
+
 const sidebar = document.getElementById("sidebar");
 const menuBtn = document.getElementById("menuBtn");
 const closeBtn = document.getElementById("closeBtn");
@@ -52,3 +54,17 @@ themeBtn.onclick = function () {
         localStorage.setItem("theme", "light");
     }
 };
+
+const editBtn = document.getElementById("editPhotoBtn");
+
+if (EDIT_MODE) {
+
+    const password = prompt("Enter Admin Password");
+
+    if (password === "Bijoy2026") {
+        editBtn.style.display = "inline-block";
+    } else {
+        alert("Wrong Password!");
+    }
+
+}
