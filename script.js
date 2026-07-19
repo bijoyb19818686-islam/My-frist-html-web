@@ -61,7 +61,7 @@ if (EDIT_MODE) {
 
     const password = prompt("Enter Admin Password");
 
-    if (password === "Bijoy2026") {
+    if (password === "BijoyP888") {
         editBtn.style.display = "inline-block";
     } else {
         alert("Wrong Password!");
