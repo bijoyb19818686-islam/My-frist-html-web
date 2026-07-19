@@ -1,3 +1,7 @@
+html{
+    scroll-behavior:smooth;
+}
+
 *{
     margin:0;
     padding:0;
@@ -8,6 +12,7 @@
 body{
     background:#f4f4f4;
     color:#222;
+    transition:.3s;
 }
 
 /* ---------- Header ---------- */
@@ -17,7 +22,7 @@ header{
     justify-content:space-between;
     align-items:center;
     background:#222;
-    color:white;
+    color:#fff;
     padding:15px 20px;
     position:sticky;
     top:0;
@@ -46,7 +51,7 @@ header button{
     height:100%;
     background:#333;
     padding:20px;
-    transition:0.3s;
+    transition:.3s;
     z-index:999;
 }
 
@@ -71,6 +76,7 @@ header button{
     padding:12px;
     margin:10px 0;
     border-radius:8px;
+    transition:.3s;
 }
 
 .sidebar a:hover{
@@ -127,6 +133,12 @@ section{
     padding:20px;
     border-radius:12px;
     box-shadow:0 2px 8px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+section:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 20px rgba(0,0,0,.18);
 }
 
 section h2{
@@ -149,24 +161,15 @@ li{
     margin:8px 0;
 }
 
-/* ---------- Mobile ---------- */
-
-@media(max-width:768px){
-
-header h2{
-    font-size:18px;
+a{
+    color:royalblue;
+    text-decoration:none;
 }
 
-.profile-frame{
-    width:150px;
-    height:150px;
+a:hover{
+    text-decoration:underline;
 }
 
-.home h1{
-    font-size:28px;
-}
-
-}
 /* ---------- Dark Mode ---------- */
 
 body.dark{
@@ -206,20 +209,8 @@ body.dark blockquote{
 body.dark .profile-frame{
     background:#222;
 }
-section:hover{
-    transform:translateY(-5px);
-    box-shadow:0 8px 20px rgba(0,0,0,.18);
-}
-a{
-    color:royalblue;
-    text-decoration:none;
-}
 
-a:hover{
-    text-decoration:underline;
-}
-
-/* ---------- Art Gallery ---------- */
+/* ---------- Gallery ---------- */
 
 .gallery{
     display:grid;
@@ -238,15 +229,13 @@ a:hover{
 .gallery img:hover{
     transform:scale(1.05);
 }
+
 /* ---------- Lightbox ---------- */
 
 .lightbox{
     display:none;
     position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
+    inset:0;
     background:rgba(0,0,0,.9);
     justify-content:center;
     align-items:center;
@@ -267,32 +256,26 @@ a:hover{
     font-size:40px;
     cursor:pointer;
 }
-/* ---------- Lightbox ---------- */
 
-.lightbox{
-    display:none;
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,.9);
-    justify-content:center;
-    align-items:center;
-    z-index:2000;
+/* ---------- Mobile ---------- */
+
+@media(max-width:768px){
+
+header h2{
+    font-size:18px;
 }
 
-.lightbox img{
-    max-width:90%;
-    max-height:90%;
-    border-radius:10px;
+.profile-frame{
+    width:150px;
+    height:150px;
 }
 
-#closeLightbox{
-    position:absolute;
-    top:20px;
-    right:30px;
-    color:white;
-    font-size:40px;
-    cursor:pointer;
+.home h1{
+    font-size:28px;
+}
+
+main{
+    padding:15px;
+}
+
 }
