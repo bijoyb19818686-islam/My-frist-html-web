@@ -1,4 +1,4 @@
-const EDIT_MODE = false;
+const EDIT_MODE = true;
 
 const sidebar = document.getElementById("sidebar");
 const menuBtn = document.getElementById("menuBtn");
