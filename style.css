@@ -218,3 +218,23 @@ a{
 a:hover{
     text-decoration:underline;
 }
+
+/* ---------- Art Gallery ---------- */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 2px 8px rgba(0,0,0,.2);
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
