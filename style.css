@@ -421,35 +421,175 @@ body.dark .gallery img{
 
 }
 
-/* ==========================
-   Mobile
-========================== */
+@media(max-width:900px){
 
-@media(max-width:768px){
+.hero{
 
-header h2{
+    flex-direction:column-reverse;
+    text-align:center;
 
-    font-size:18px;
+}
+
+.hero-description{
+
+    margin:auto;
+    margin-bottom:35px;
+
+}
+
+.hero-buttons{
+
+    justify-content:center;
+
+}
+
+.hero h1{
+
+    font-size:42px;
 
 }
 
 .profile-frame{
 
-    width:150px;
-    height:150px;
+    width:280px;
+    height:340px;
 
 }
 
-.home h1{
+}
+/* ================= HERO ================= */
 
-    font-size:28px;
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:60px;
+
+    padding:80px 8%;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.greeting{
+    color:#777;
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.hero h1{
+    font-size:58px;
+    margin-bottom:15px;
+}
+
+.hero h2{
+    font-size:26px;
+    color:#3b82f6;
+    margin-bottom:25px;
+}
+
+.hero-description{
+
+    max-width:600px;
+    line-height:1.8;
+    color:#666;
+    font-size:18px;
+    margin-bottom:35px;
 
 }
 
-main{
+/* Buttons */
 
-    padding:15px;
+.hero-buttons{
+
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
 
 }
+
+.btn{
+
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:30px;
+    transition:.3s;
+
+}
+
+.primary{
+
+    background:#3b82f6;
+    color:white;
+
+}
+
+.primary:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.secondary{
+
+    border:2px solid #3b82f6;
+    color:#3b82f6;
+
+}
+
+.secondary:hover{
+
+    background:#3b82f6;
+    color:white;
+
+}
+
+/* ================= PROFILE ================= */
+
+.hero-image{
+
+    flex:1;
+    display:flex;
+    justify-content:center;
+
+}
+
+.profile-frame{
+
+    width:360px;
+    height:430px;
+
+    background:linear-gradient(145deg,#3b82f6,#6d28d9);
+
+    border-radius:180px 180px 70px 70px;
+
+    padding:10px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+
+    transition:.4s;
+
+}
+
+.profile-frame:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.profile-frame img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:170px 170px 60px 60px;
 
 }
