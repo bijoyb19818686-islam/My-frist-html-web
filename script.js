@@ -1,49 +1,121 @@
+// ===============================
+// Portfolio Script
+// ===============================
+
+// ---------- Gallery Lightbox ----------
+
+const galleryImages = document.querySelectorAll(".gallery img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightboxImg");
+const closeLightbox = document.getElementById("closeLightbox");
+
+if (galleryImages.length > 0) {
+
+    galleryImages.forEach(img => {
+
+        img.addEventListener("click", () => {
+
+            lightbox.style.display = "flex";
+            lightboxImg.src = img.src;
+
+        });
+
+    });
+
+}
+
+if (closeLightbox) {
+
+    closeLightbox.addEventListener("click", () => {
+
+        lightbox.style.display = "none";
+
+    });
+
+}
+
+if (lightbox) {
+
+    lightbox.addEventListener("click", (e) => {
+
+        if (e.target === lightbox) {
+
+            lightbox.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+// ---------- Sidebar ----------
+
 const sidebar = document.getElementById("sidebar");
 const menuBtn = document.getElementById("menuBtn");
 const closeBtn = document.getElementById("closeBtn");
-const themeBtn = document.getElementById("themeBtn");
 
-/* ---------- Sidebar ---------- */
+if (menuBtn && sidebar) {
 
-// Open / Close
-menuBtn.addEventListener("click", function () {
-    sidebar.classList.toggle("active");
-});
+    menuBtn.addEventListener("click", () => {
 
-// Close Button
-closeBtn.addEventListener("click", function () {
-    sidebar.classList.remove("active");
-});
+        sidebar.classList.toggle("active");
 
-// Click Outside = Close
-document.addEventListener("click", function (e) {
+    });
+
+}
+
+if (closeBtn && sidebar) {
+
+    closeBtn.addEventListener("click", () => {
+
+        sidebar.classList.remove("active");
+
+    });
+
+}
+
+document.addEventListener("click", (e) => {
 
     if (
+        sidebar &&
         sidebar.classList.contains("active") &&
         !sidebar.contains(e.target) &&
         !menuBtn.contains(e.target)
     ) {
+
         sidebar.classList.remove("active");
+
     }
 
 });
 
-/* ---------- Theme System ---------- */
+
+// ---------- Theme ----------
 
 const themeBtn = document.getElementById("themeBtn");
 
-// Apply Theme
 function applyTheme(theme){
 
     if(theme === "dark"){
 
         document.body.classList.add("dark");
-        themeBtn.innerHTML = "☀️";
+
+        if(themeBtn){
+
+            themeBtn.innerHTML = "☀️";
+
+        }
 
     }else{
 
         document.body.classList.remove("dark");
-        themeBtn.innerHTML = "🌙";
+
+        if(themeBtn){
+
+            themeBtn.innerHTML = "🌙";
+
+        }
 
     }
 
@@ -53,7 +125,6 @@ const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
 const savedTheme = localStorage.getItem("theme");
 
-// First Load
 if(savedTheme){
 
     applyTheme(savedTheme);
@@ -64,23 +135,25 @@ if(savedTheme){
 
 }
 
-// Button Click
-themeBtn.addEventListener("click", function(){
+if(themeBtn){
 
-    const newTheme = document.body.classList.contains("dark")
+    themeBtn.addEventListener("click", ()=>{
+
+        const newTheme =
+        document.body.classList.contains("dark")
         ? "light"
         : "dark";
 
-    applyTheme(newTheme);
+        applyTheme(newTheme);
 
-    localStorage.setItem("theme", newTheme);
+        localStorage.setItem("theme", newTheme);
 
-});
+    });
 
-// Auto Follow System Theme
-mediaQuery.addEventListener("change", function(e){
+}
 
-    // Only follow system if user has not chosen manually
+mediaQuery.addEventListener("change",(e)=>{
+
     if(!localStorage.getItem("theme")){
 
         applyTheme(e.matches ? "dark" : "light");
