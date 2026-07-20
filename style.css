@@ -279,3 +279,35 @@ main{
 }
 
 }
+/* ---------- Dark Mode (Art Gallery) ---------- */
+
+body.dark{
+    background:#121212;
+    color:#f1f1f1;
+}
+
+body.dark header{
+    background:#111;
+}
+
+body.dark main{
+    background:#121212;
+}
+
+body.dark section{
+    background:#1e1e1e;
+    color:#f1f1f1;
+}
+
+body.dark h1,
+body.dark h2{
+    color:#ffffff;
+}
+
+body.dark .gallery{
+    background:transparent;
+}
+
+body.dark .gallery img{
+    box-shadow:0 4px 15px rgba(255,255,255,.08);
+}
