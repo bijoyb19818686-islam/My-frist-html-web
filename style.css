@@ -764,13 +764,17 @@ section{
 }
 
 
-/*==========================
+//*==========================
         EDUCATION
 ==========================*/
 
 #education{
 
-    padding:60px 8%;
+    max-width:1000px;
+
+    margin:auto;
+
+    padding:70px 20px;
 
 }
 
@@ -778,13 +782,16 @@ section{
 
     text-align:center;
 
-    font-size:36px;
+    font-size:40px;
 
     color:#2563eb;
 
-    margin-bottom:40px;
+    margin-bottom:45px;
 
 }
+
+
+/* Card */
 
 .education-card{
 
@@ -794,13 +801,16 @@ section{
 
     overflow:hidden;
 
-    box-shadow:0 6px 18px rgba(0,0,0,.08);
+    margin-bottom:40px;
 
-    margin-bottom:35px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
 
 }
 
-.education-info{
+
+/* Top */
+
+.education-header{
 
     display:flex;
 
@@ -808,15 +818,15 @@ section{
 
     gap:20px;
 
-    padding:25px;
+    padding:22px 25px;
 
 }
 
 .school-logo{
 
-    width:70px;
+    width:80px;
 
-    height:70px;
+    height:80px;
 
     border-radius:50%;
 
@@ -826,15 +836,23 @@ section{
 
 }
 
-.education-info h3{
+.school-details{
 
-    font-size:26px;
-
-    margin-bottom:10px;
+    flex:1;
 
 }
 
-.education-info h3 a{
+.school-details h3{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    margin-bottom:8px;
+
+}
+
+.school-details h3 a{
 
     color:#2563eb;
 
@@ -842,52 +860,91 @@ section{
 
 }
 
-.education-info h3 a:hover{
+.school-details h3 a:hover{
 
     text-decoration:underline;
 
 }
 
-.education-info p{
+.school-details p{
+
+    font-size:17px;
 
     color:#555;
 
-    margin-bottom:8px;
+    margin-bottom:6px;
 
 }
 
-.education-info span{
+.school-details span{
 
-    color:#777;
+    font-size:15px;
 
-    font-weight:bold;
+    color:#2563eb;
+
+    font-weight:600;
 
 }
+
+/* Primary School */
+
+.no-logo{
+
+    padding-left:5px;
+
+}
+
+
+/* Image */
 
 .school-image{
 
+    display:block;
+
     width:100%;
 
-    height:300px;
+    height:340px;
 
     object-fit:cover;
-
-    display:block;
 
 }
 
 
-/*==========================
-        RESPONSIVE
-==========================*/
+/* Mobile */
 
 @media(max-width:768px){
 
-.education-info{
+#education{
 
-    flex-direction:column;
+    padding:50px 15px;
 
-    text-align:center;
+}
+
+.education-header{
+
+    gap:15px;
+
+    padding:18px;
+
+}
+
+.school-logo{
+
+    width:65px;
+
+    height:65px;
+
+}
+
+.school-details h3{
+
+    font-size:22px;
+
+}
+
+.school-details p{
+
+    font-size:15px;
 
 }
 
