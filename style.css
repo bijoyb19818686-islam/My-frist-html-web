@@ -573,8 +573,6 @@ header h2{
 
 .hero{
 
-    min-height:85vh;
-
     display:flex;
 
     align-items:center;
@@ -583,10 +581,11 @@ header h2{
 
     gap:50px;
 
-    padding:40px 0 20px;
+    padding:30px 0 20px;
+
+    min-height:auto;
 
 }
-
 
 /*==============================
             HERO TEXT
@@ -818,7 +817,11 @@ body.dark .greeting{
 /*==================================================
             ABOUT & PHILOSOPHY
 ==================================================*/
+#about{
 
+    margin-top:15px;
+
+}
 /*==============================
         SECTION CARD
 ==============================*/
